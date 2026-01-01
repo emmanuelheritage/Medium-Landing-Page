@@ -1,0 +1,271 @@
+*{
+    margin:0px;
+    border:0px;
+    box-sizing:border-box;
+}
+body
+{
+    height:100vh;
+    background-color: #f6f4ee;
+    padding: 0;
+    margin: 0;
+}
+
+/********************************* GRID ELEMENTS ************************************/
+
+main
+{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "article article article"
+    "footer footer footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/********************************* NAVBAR ****************************************/
+
+header
+{
+    grid-area: header;
+    background-color: #f6f4ee;
+    border-bottom: 1px solid rgba(48, 48, 48, 0.39);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    
+}
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 76px;
+    padding: 0px 50px;
+}
+.logo
+{
+    font-family: serif, cursive;
+    font-weight: 700;
+    font-size: 45px;
+}
+nav ul 
+{
+    display: flex;
+    list-style: none;
+    gap:20px;
+    
+}
+.nav-links #btn {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+/**************************************** HERO SECTION *******************************************/
+
+article
+{
+    grid-area: article;
+    display: flex;
+    justify-content: center;
+    padding: 35px 0px 0px 95px;
+    height: 90vh;
+    gap:25px;
+}
+.hero-content
+{
+    padding:150px 0px 0px;
+}
+article h1
+{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color:rgba(12, 12, 12, 0.953);
+}
+article p
+{
+    font-size: 1.3rem;
+    color: rgba(22, 18, 18, 0.834);
+    margin:0 0 2rem;
+}
+article a
+{
+    display:inline-block;
+    text-decoration:none;
+    background-color: rgba(0, 0, 0, 0.93);
+    padding:1rem 3.1rem;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size:1.3rem;
+    color:white;
+}
+article a:hover
+{
+    text-decoration:none;
+    background-color: rgb(0, 0, 0);
+    color:white;
+}
+
+/*==========================================FOOTER===================================================*/
+
+footer
+{
+    grid-area: footer;
+    height:8vh;
+    padding:25px;
+    border-top: 1px solid rgba(48, 48, 48, 0.39);
+    width:100%;
+    text-align: center;
+}
+footer ul
+{
+    
+    list-style:none;
+    display:flex;
+    justify-content: center;
+    gap:15px;
+}
+footer ul a
+{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.756);
+    padding: 10px;
+    font-size: 14px;
+}
+footer ul a:hover
+{
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+/*Responsive Designs
+@media screen and (max-width:768px)
+{
+  nav
+  {
+    padding:0px 25px;
+  }
+  .logo
+  {
+    font-size: 35px;
+  }
+  nav ul
+  {
+    gap: 15px;
+  }
+  nav ul li a
+  {
+    font-size: 13px;
+  }
+  .nav-links #btn
+  {
+    padding: 8px 15px;
+  }
+  article
+  {
+    padding: 100px 25px 0px 25px;
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+  }
+  .hero-content
+  {
+    padding: 50px 0px 0px;
+  }
+  article h1 
+  {
+    font-size: 3.5rem;
+  }
+  article p
+  {
+    font-size: 1.1rem;
+  }
+  article img
+  {
+    max-width: 100%;
+  }
+  footer ul
+  {
+    flex-wrap: wrap;
+    gap:10px;
+  }
+}*/
+@media screen and (max-width:480px)
+{
+  nav
+  {
+    padding: 0px 15px;
+    height:60px;
+  }
+  .logo
+  {
+    font-size: 24px; 
+  }
+  nav ul
+  {
+    gap: 8px;
+  }
+  nav ul li a
+  {
+    font-size: 10px;
+  }
+  .nav-links #btn
+  {
+    padding: 6px 10px;
+  }
+  article
+  {
+    padding: 80px 10px 0px 15px;
+    gap:10px;
+    overflow-x: hidden;
+  }
+  .hero-content
+  {
+    padding: 60px 0px 0px;
+    min-width:0;
+    flex-shrink: 1;
+  }
+  article h1
+  {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  article p
+  {
+    font-size: 0.85rem;
+    margin: 0 0 1rem;
+  }
+  article a 
+  {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+    border-radius: 15px;
+  }
+  article img
+  {
+    max-width: 280px;
+    flex-shrink: 0;
+  }
+  footer 
+  {
+    height: auto;
+    padding: 15px 10px;
+  }
+  footer ul
+  {
+    gap:8px;
+    flex-wrap: wrap;
+  }
+}
